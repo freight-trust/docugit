@@ -1,0 +1,63 @@
+= Generic Asciidoc File
+// Settings:
+:experimental:
+:idprefix:
+:idseparator: -
+ifndef::env-github[:icons: font]
+ifdef::env-github,env-browser[]
+:toc: macro
+:toclevels: 1
+endif::[]
+ifdef::env-github[]
+:status:
+:!toc-title:
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+// Aliases:
+:project-name: Freight Trust
+:project-handle: freight-trust
+// Variables:
+:release-version: 4.0.0
+:url-project-repo: {url-project}
+:url-project-issues: {url-project-repo}/issues
+
+
+
+ifdef::status[]
+/* status badges
+ *
+ * shields.io  */
+endif::[]
+
+
+=== An Example AsciiDoc Document
+
+If you see the version of {project-name} printed, you're ready to use {project-name}!
+
+Let's grab an AsciiDoc document to distill and start putting {project-name} to use.
+
+If you don't already have an AsciiDoc document, you can use the <<examples/basic-example.adoc#,basic-example.adoc>> file found in the examples directory of this project.
+
+ifeval::[{safe-mode-level} >= 20]
+See <<examples/basic-example.adoc#,basic-example.adoc>>.
+endif::[]
+ifeval::[{safe-mode-level} < 20]
+.basic-example.adoc
+[source,asciidoc]
+....
+include::examples/basic-example.adoc[]
+....
+endif::[]
+
+ifndef::env-site[]
+== Contributing
+
+See the <<CONTRIBUTING.adoc#,contributing guide>>.
+To help develop {project-name}, or to simply use the development version, refer to the <<CONTRIBUTING-CODE.adoc#,developing and contributing code guide>>.
+
+[[resources,Links]]
+== Resources
